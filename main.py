@@ -15,6 +15,9 @@ def main():
 
     soup = BeautifulSoup(html, 'html.parser')
     table = soup.find('table', {'class': 'table table-striped col-md-12'})
+    if not table:
+        print('Couldn\'t find the grades table')
+        return
     table_rows = table.find_all('tr')
     total_hours = 0
     total_points = 0
