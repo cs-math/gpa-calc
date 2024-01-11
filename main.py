@@ -9,7 +9,7 @@ def main():
         print('Couldn\'t find an HTML file')
         return
     file_name = file_name[0]
-    file = open(file_name, 'r')
+    file = open(file_name, encoding="utf8")
     html = file.read()
     file.close()
 
